@@ -1,7 +1,13 @@
 import static org.junit.Assert.*;
 import org.junit.Test;
 
+/**
+ * Clase de prueba para la clase VectorHeap.
+ */
 public class JUnit {
+    /**
+     * Prueba de la clase Paciente.
+     */
     @Test
     public void testAddAndRemove() {
         VectorHeap<Paciente> heap = new VectorHeap<>();

@@ -1,6 +1,11 @@
 import java.io.*;
 import java.util.Scanner;
 
+/**
+ * Clase principal para gestionar la cola de pacientes.
+ * Lee los datos de un archivo y los añade a una cola de prioridad.
+ */
+
 public class Main {
     public static void main(String[] args) {
         VectorHeap<Paciente> cola = new VectorHeap<>();
