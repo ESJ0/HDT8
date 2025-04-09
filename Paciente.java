@@ -10,13 +10,16 @@ public class Paciente implements Comparable<Paciente> {
     }
 
     public String getNombre(){ 
-        return nombre;}
+        return nombre;
+    }
 
     public String getSintoma(){ 
-        return sintoma;}
+        return sintoma;
+    }
 
     public char getCodigo(){ 
-        return codigo;}
+        return codigo;
+    }
 
     public int compareTo(Paciente otro) {
         return Character.compare(this.codigo, otro.codigo);
