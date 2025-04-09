@@ -48,25 +48,29 @@ public class VectorHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 
     @Override
     public void add(T value) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'add'");
+        data.add(value);
+        filtrarArriba(data.size() - 1);
     }
 
     @Override
     public T remove() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'remove'");
+        if (isEmpty()) return null;
+        T min = data.get(0);
+        T last = data.remove(data.size() - 1);
+        if (!data.isEmpty()) {
+            data.set(0, last);
+            filtrarAbajo(0);
+        }
+        return min;
     }
 
     @Override
     public T peek() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'peek'");
+        return data.isEmpty() ? null : data.get(0);
     }
 
     @Override
     public boolean isEmpty() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'isEmpty'");
+        return data.isEmpty();
     }
 }
